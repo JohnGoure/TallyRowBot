@@ -8,7 +8,7 @@ pyautogui.PAUSE =.159
 pyautogui.FAILSAFE = True
 
 """ This class implements the model for Stardew Valley Commands
-    initialize the class with the strings associated with the keyboard commands"""
+    it also declares and intializes the class with the strings associated with the keyboard commands"""
 class StardewValleyCommands():
 
     def __init__(self):
