@@ -1,6 +1,6 @@
 import pyautogui
 
-#slow down the keyboard inputs, so that Stardew Valley receives the input.
+# slow down the keyboard inputs, so that Stardew Valley receives the input.
 pyautogui.PAUSE =.159
 
 # FAILSAFE allows the host to turn off pyauotgui
@@ -8,7 +8,7 @@ pyautogui.PAUSE =.159
 pyautogui.FAILSAFE = True
 
 """ This class implements the model for Stardew Valley Commands
-    initialize the class with the strings associated with the keyboard commands"""
+    it also declares and intializes the class with the strings associated with the keyboard commands"""
 class StardewValleyCommands():
 
     def __init__(self):
