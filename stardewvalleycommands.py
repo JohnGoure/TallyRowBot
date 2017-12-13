@@ -1,7 +1,5 @@
 import pyautogui
-import time
 
-time.sleep(3)
 pyautogui.PAUSE =.159
 pyautogui.FAILSAFE = True
 
