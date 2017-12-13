@@ -4,7 +4,7 @@ import time
 pyautogui.PAUSE =.06
 pyautogui.FAILSAFE = True
 
-class Player():
+class HollowKnightCommands():
     def __init__(self):
         self._move_Right_String = 'right'
         self._move_Left_String = 'left'
