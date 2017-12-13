@@ -3,7 +3,9 @@ import irc.bot
 import requests
 from stardewvalleycommands import *
 
-
+""" This is the controller and the view."""
+""" The IRC Bot connects to the Twitch Server then"""
+""" it reads commands from the twitch IRC chat."""
 class TwitchBot(irc.bot.SingleServerIRCBot):
     def __init__(self, username, client_id, token, channel):
         self.client_id = client_id
