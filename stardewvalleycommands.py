@@ -1,6 +1,6 @@
 import pyautogui
 
-#slow down the keyboard inputs, so that Stardew Valley receives the input.
+# slow down the keyboard inputs, so that Stardew Valley receives the input.
 pyautogui.PAUSE =.159
 
 # FAILSAFE allows the host to turn off pyauotgui
