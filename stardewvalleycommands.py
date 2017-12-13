@@ -1,6 +1,8 @@
 import pyautogui
+import time
 
-pyautogui.PAUSE =0
+time.sleep(3)
+pyautogui.PAUSE =.159
 pyautogui.FAILSAFE = True
 
 class StardewValleyCommands():
@@ -16,23 +18,59 @@ class StardewValleyCommands():
         self._journal = 'f'
         self._leftclick = 'c'
         self._rightclick = 'x'
+        self._esc = 'esc'
 
-    def moveUp(self): #Press the key to move up up
+    def moveup(self):
+        pyautogui.keyDown(self._up)
+        pyautogui.keyUp(self._up)
+        print("Keyboard pressed: " + self._up)
 
-    def moveDown(self): # Press the key to move down
+    def movedown(self):
+        pyautogui.keyDown(self._down)
+        pyautogui.keyUp(self._down)
+        print("Keyboard pressed: " + self._down)
 
-    def moveLeft(self): # Press the key to move left
+    def moveleft(self):
+        pyautogui.keyDown(self._left)
+        pyautogui.keyUp(self._left)
+        print("Keyboard pressed: " + self._left)
 
-    def moveRight(self): #Press the key to move right
-        
-    def openMap(self): #Press the key to open the map
+    def moveright(self):
+        pyautogui.keyDown(self._right)
+        pyautogui.keyUp(self._right)
+        print("Keyboard pressed: " + self._right)
 
-    def openMenu(self): #Press the key to open the menu
+    def openmap(self):
+        pyautogui.keyDown(self._map)
+        pyautogui.keyUp(self._map)
+        print("Keyboard pressed: " + self._map)
 
-    def openJournal(self): #Press the key to open the journal
+    def openmenu(self):
+        pyautogui.keyDown(self._menu)
+        pyautogui.keyUp(self._menu)
+        print("Keyboard pressed: " + self._menu)
 
-    def leftClick(self): #Press the key to left click
+    def openjournal(self):
+        pyautogui.keyDown(self._journal)
+        pyautogui.keyUp(self._journal)
+        print("Keyboard pressed: " + self._journal)
 
-    def rightClick(self): #Press the key to right click
+    def leftclick(self):
+        pyautogui.keyDown(self._leftclick)
+        pyautogui.keyUp(self._leftclick)
+        print("Keyboard pressed: " + self._leftclick)
+
+    def rightclick(self):
+        pyautogui.keyDown(self._rightclick)
+        pyautogui.keyUp(self._rightclick)
+        print("Keyboard pressed: " + self._rightclick)
+
+    def escape(self):
+        pyautogui.keyDown(self._esc)
+        pyautogui.keyUp(self._esc)
+        print("Keyboard pressed: " + self._esc)
 
 
+player = StardewValleyCommands()
+
+player.openmenu()

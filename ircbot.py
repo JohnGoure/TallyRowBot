@@ -1,9 +1,7 @@
 import sys
-
 import irc.bot
 import requests
-
-from player import *
+from stardewvalleycommands import *
 
 
 class TwitchBot(irc.bot.SingleServerIRCBot):
@@ -11,7 +9,7 @@ class TwitchBot(irc.bot.SingleServerIRCBot):
         self.client_id = client_id
         self.token = token
         self.channel = '#' + channel
-        self._hollowKnightBot = Player()
+        self._stardewValleyBot = StardewValleyCommands()
 
         # Get the channel id, we will need this for v5 API calls
         url = 'https://api.twitch.tv/kraken/users?login=' + channel
@@ -70,46 +68,26 @@ class TwitchBot(irc.bot.SingleServerIRCBot):
             c.privmsg(self.channel, message)
 
         # Provide player movement
-        elif cmd == "up":
-            self._hollowKnightBot.lookUp()
-        elif cmd == "down":
-            self._hollowKnightBot.lookDown()
-        elif cmd == "right":
-            self._hollowKnightBot.shortStepRight()
-        elif cmd == "longright":
-            self._hollowKnightBot.longStepRight()
-        elif cmd == 'left':
-            self._hollowKnightBot.shortStepLeft()
-        elif cmd == 'longleft':
-            self._hollowKnightBot.longStepLeft()
-        elif cmd == 'jump':
-            self._hollowKnightBot.jump()
-        elif cmd == 'longjump':
-            self._hollowKnightBot.longJump()
-        elif cmd == 'dash':
-            self._hollowKnightBot.dash()
-        elif cmd == 'superdash':
-            self._hollowKnightBot.superDash()
-        elif cmd == 'inventory':
-            self._hollowKnightBot.inventory()
-        elif cmd == 'attack':
-            self._hollowKnightBot.attack()
-        elif cmd == 'stop':
-            self._hollowKnightBot.stop()
-        elif cmd == 'holdright':
-            self._hollowKnightBot.holdRight()
-        elif cmd == 'holdleft':
-            self._hollowKnightBot.holdLeft()
-        elif cmd == 'upattack':
-            self._hollowKnightBot.upAttack()
-        elif cmd == 'downattack':
-            self._hollowKnightBot.downAttack()
-        elif cmd == 'select':
-            self._hollowKnightBot.select()
-        elif cmd == 'quickcast':
-            self._hollowKnightBot.quickCast()
-        elif cmd == 'quickmap':
-            self._hollowKnightBot.quickMap()
+        elif cmd == "u":
+            self._stardewValleyBot.moveup()
+        elif cmd == "d":
+            self._stardewValleyBot.movedown()
+        elif cmd == "r":
+            self._stardewValleyBot.moveright()
+        elif cmd == 'l':
+            self._stardewValleyBot.moveleft()
+        elif cmd == 'm':
+            self._stardewValleyBot.openmap()
+        elif cmd == 'i':
+            self._stardewValleyBot.openmenu()
+        elif cmd == 'j':
+            self._stardewValleyBot.openjournal()
+        elif cmd == 'c':
+            self._stardewValleyBot.leftclick()
+        elif cmd == 'rc':
+            self._stardewValleyBot.rightclick()
+        elif cmd =='e':
+            self._stardewValleyBot.escape()
 
         # The command was not recognized
         else:
