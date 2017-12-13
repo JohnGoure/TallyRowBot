@@ -90,6 +90,30 @@ class TwitchBot(irc.bot.SingleServerIRCBot):
             self._stardewValleyBot.rightclick()
         elif cmd =='e':
             self._stardewValleyBot.escape()
+        elif cmd == '1':
+            self._stardewValleyBot.tool_1()
+        elif cmd == '2':
+            self._stardewValleyBot.tool_2()
+        elif cmd == '3':
+            self._stardewValleyBot.tool_3()
+        elif cmd == '4':
+            self._stardewValleyBot.tool_4()
+        elif cmd == '5':
+            self._stardewValleyBot.tool_5()
+        elif cmd == '6':
+            self._stardewValleyBot.tool_6()
+        elif cmd == '7':
+            self._stardewValleyBot.tool_7()
+        elif cmd == '8':
+            self._stardewValleyBot.tool_8()
+        elif cmd == '9':
+            self._stardewValleyBot.tool_9()
+        elif cmd == '10':
+            self._stardewValleyBot.tool_10()
+        elif cmd == '11':
+            self._stardewValleyBot.tool_11()
+        elif cmd == '12':
+            self._stardewValleyBot.tool_12()
 
         # The command was not recognized
         else:
